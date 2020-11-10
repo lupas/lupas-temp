@@ -6,14 +6,16 @@ This repo shows an issue with nuxt-pwa (workbox) and the `--hostname` option on 
 
 1. Create a simple nuxt app
 
-2. Install the PWA module with `yarn add --dev @nuxtjs/pwa`
+2. Install the PWA module with
+   >`yarn add --dev @nuxtjs/pwa`
 
-3. Add the PWA module to `nuxt.config.js` and set `dev: true`
+1. Add the PWA module to `nuxt.config.js` and set `dev: true`
+   > See https://pwa.nuxtjs.org/setup
 
-3. Add `--hostname` option to `nuxt` command in package.json
-   > See:
+2. Add `--hostname` option to `nuxt` command in package.json
+   > See https://nuxtjs.org/faq/host-port/
 
-4. Start app and see error:
+3. Start app and see error in Chrome Dev Tools:
    ```log
    Error registering workbox: TypeError: Cannot read property 'addEventListener' of undefined
     at new Workbox (workbox-window.dev.es5.mjs?ae33:612)
@@ -24,3 +26,4 @@ This repo shows an issue with nuxt-pwa (workbox) and the `--hostname` option on 
     at asyncGeneratorStep (asyncToGenerator.js?c973:3)
     at _next (asyncToGenerator.js?c973:25)
     ```
+    ![](./.github/devToolsError.png)
